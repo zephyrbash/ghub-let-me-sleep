@@ -25,8 +25,8 @@ static int kill_process() {
     int killed = 0;
 
     do {
-        // const char *process_name = "lghub_agent.exe";
-        const char *process_name = "WindowsTerminal.exe";
+        // const char *process_name = "WindowsTerminal.exe"; // <- easy to test in the VM
+        const char *process_name = "lghub_agent.exe";
         if (_stricmp(processEntry.szExeFile, process_name) == 0) {
             HANDLE process = OpenProcess(
                 PROCESS_TERMINATE,
